@@ -10,7 +10,7 @@ CREATE TABLE `agency` (
     agency_fare_url VARCHAR(100),
     
     KEY `transit_system` (transit_system),
-    UNIQUE KEY `agency_id` (agency_id)
+    KEY `agency_id` (agency_id)
 );
 
 CREATE TABLE `calendar_dates` (
@@ -124,7 +124,7 @@ CREATE TABLE `routes` (
     route_desc VARCHAR(255),
     
     KEY `transit_system` (transit_system),
-    UNIQUE KEY `route_id` (route_id),
+    KEY `route_id` (route_id),
     KEY `route_short_name` (route_short_name),
     KEY `agency_id` (agency_id),
     KEY `route_type` (route_type)
@@ -186,7 +186,7 @@ CREATE TABLE `stops` (
     wheelchair_boarding TINYINT(1),
     
     KEY `transit_system` (transit_system),
-    UNIQUE KEY `stop_id` (stop_id),
+    KEY `stop_id` (stop_id),
     KEY `zone_id` (zone_id),
     KEY `stop_lat` (stop_lat),
     KEY `stop_lon` (stop_lon),
