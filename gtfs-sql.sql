@@ -173,7 +173,7 @@ CREATE TABLE `stop_times` (
 CREATE TABLE `stops` (
     id INT(12) NOT NULL PRIMARY KEY AUTO_INCREMENT,
     transit_system VARCHAR(50) NOT NULL DEFAULT 'default',
-    stop_id VARCHAR(100),
+    stop_id VARCHAR(100) NOT NULL,
     stop_code VARCHAR(50),
     stop_name VARCHAR(255) NOT NULL,
     stop_desc VARCHAR(255),
@@ -214,7 +214,7 @@ CREATE TABLE `trips` (
     transit_system VARCHAR(50) NOT NULL DEFAULT 'default',
     route_id VARCHAR(100) NOT NULL,
     service_id VARCHAR(100) NOT NULL,
-    trip_id VARCHAR(100),
+    trip_id VARCHAR(100) NOT NULL,
     trip_headsign VARCHAR(255),
     trip_short_name VARCHAR(255),
     direction_id TINYINT(1) NOT NULL DEFAULT '0' COMMENT '0: one direction, 1: another',
